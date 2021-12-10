@@ -23,7 +23,7 @@ class WebViewExampleState extends State<WebViewScreen> {
   Widget build(BuildContext context) {
     return InAppWebView(
       initialUrlRequest: URLRequest(
-          url: Uri.parse("https://vibhupuri.github.io/react-material-admin")),
+          url: Uri.parse("https://vibhupuri.github.io/react-material-admin/static/main.html")),
       androidOnPermissionRequest: (controller, origin, resources) async {
         return PermissionRequestResponse(
             resources: resources,
@@ -41,18 +41,18 @@ class WebViewExampleState extends State<WebViewScreen> {
                   Navigator.of(context).pop();
                 },
               );
-              AlertDialog alert = AlertDialog(
+              /*AlertDialog alert = AlertDialog(
                 title: Text("Simple Alert"),
                 content: Text("This is an alert message."),
                 actions: [
                   okButton,
                 ],
-              );
+              );*/
               Navigator.of(context).pushNamed("/app");
               showDialog(
                 context: context,
                 builder: (BuildContext context) {
-                  return alert;
+                  return ;//alert;
                 },
               );
               print(args);

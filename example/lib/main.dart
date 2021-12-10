@@ -20,7 +20,7 @@ class AppStart extends StatelessWidget {
         theme: ThemeData(primaryColor: Colors.amber),
         routes: {
           '/app': (_) => new MyApp(),
-          '/wv': (context) => WebViewScreen(),
+          '/wv': (context) => WebViewScreen()
         },
         home: SplashScreen(),
         debugShowCheckedModeBanner: false);
@@ -42,11 +42,11 @@ class _MyAppState extends State<MyApp> {
   Future<String> initTransaction(String app) async {
     String response = await FlutterUpi.initiateTransaction(
         app: app,
-        pa: "7838090482@paytm",
-        pn: "Vibhu Puri",
+        pa: "rishank.la@okhdfcbank",
+        pn: "Rishank Gupta",
         tr: "TR1234",
-        tn: "This is a test transaction",
-        am: "5.01",
+        tn: "This is a transaction",
+        am: "5.00",
         cu: "INR",
         url: "https://www.google.com");
     print(response);
